@@ -20,6 +20,7 @@ This config file contains references to the images listed in Component 2.
 Note: As specified in the submission guide, the file contains Jinja style template references to `{{ eval_id }}`.
 In addition, there is a similar reference for the **CONFIG_JSON_PATH** environment variable value, referenced as: `{{ CONFIG_JSON_PATH }}`
 
+---
 
 ### Note on the ta3_search command
 

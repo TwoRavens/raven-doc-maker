@@ -30,6 +30,8 @@ DEPLOY_DICT = {RAVENS_NGINX_IMAGE_KEY : '%s/tworavens/nginx:latest' % TWORAVENS_
                CRA_TA2_IMAGE_KEY : '%s/eve/docker-images:latest' % D3M_REGISTRY}
 
 ISI_DEPLOY_DICT = {\
+        'title' : 'TwoRavens and ISI',
+        'description' : 'This repository contains the TA3 submission for TwoRavens and ISI.', 
         RAVENS_NGINX_IMAGE_KEY : '%s/tworavens/nginx:latest' % ISI_REGISTRY,
         TWORAVENS_IMAGE_KEY : '%s/tworavens:latest' % ISI_REGISTRY,
         ROOK_IMAGE_KEY : '%s/tworavens/rook-service:latest' % ISI_REGISTRY,
@@ -43,6 +45,8 @@ ISI_DEPLOY_DICT = {\
        'RAVENS_ISI_VOLUME_MOUNTS' : RAVENS_ISI_VOLUME_MOUNTS}
 
 CRA_DEPLOY_DICT = {\
+        'title' : 'TwoRavens and CRA',
+        'description' : 'This repository contains the TA3 submission for TwoRavens and Charles River Associates.',
         RAVENS_NGINX_IMAGE_KEY : '%s/tworavens/nginx:latest' % CRA_REGISTRY,
         TWORAVENS_IMAGE_KEY : '%s/tworavens:latest' % CRA_REGISTRY,
         ROOK_IMAGE_KEY : '%s/tworavens/rook-service:latest' % CRA_REGISTRY,

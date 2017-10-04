@@ -1,6 +1,6 @@
-# TA3 Submission: TwoRavens and ISI
+# TA3 Submission: TwoRavens and CRA
 
-This repository contains the TA3 submission for TwoRavens and ISI.
+This repository contains the TA3 submission for TwoRavens and Charles River Associates.
 
 ## Submission components
 

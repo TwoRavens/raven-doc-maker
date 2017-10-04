@@ -1,6 +1,6 @@
-# TA3 Submission: TwoRavens and ISI
+# TA3 Submission: {{ title }}
 
-This repository contains the TA3 submission for TwoRavens and ISI.
+{{ description }}
 
 ## Submission components
 

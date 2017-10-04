@@ -17,7 +17,7 @@ The config file, which contains references to the images, may be found in the [c
 
 ### Note on the ta3_search command
 
-The ta3_search command to load a config file may be executed against the running ta3-main container.
+The ta3_search command to load a config file may be executed against the running `ta3-main` container.
 
 The format for the command is:
 

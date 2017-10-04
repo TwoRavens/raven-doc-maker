@@ -32,17 +32,16 @@ spec:
     # TA3 specification volume mount for both containers
     - name: shared-vol
       emptyDir: {}
-    # Additional Volumes mounted for ISI/TwoRavens sharing
-    - name: "isi-volume"
-      emptyDir: {}
+    # Additional Volume mounted for TwoRavens sharing
     - name: "ravens-volume"
-      emptyDir: {}
+      {% if IS_DEPLOY %}emptyDir: {}{% else %}hostPath:
+        path: "/Users/ramanprasad/Documents/github-rp/TwoRavens/ravens_volume"{% endif %}
   containers:
     # -------------------------
     # TA3 - Ravens nginx - reverse proxy for ta3-main
     # -------------------------
     - name: ravens-nginx
-      image: registry.datadrivendiscovery.org/tworavens/tworavens/nginx:latest
+      image: {{ ravens_nginx_image }}
       ports:
         - containerPort: 80
           name: http
@@ -55,18 +54,9 @@ spec:
     # TA3 Main - TwoRavens
     # -------------------------
     - name: ta3-main
-      image: registry.datadrivendiscovery.org/tworavens/tworavens:latest
+      image: {{ tworavens_image }}
       # current tworavens has a mount at /ravens_volume
-      volumeMounts:
-        - mountPath: /shared_dir
-          name: shared-vol
-          readOnly: false
-        - mountPath: "/ravens_volume"
-          name: "ravens-volume"
-          readOnly: false
-        - mountPath: /tmp/dsbox-ta2/
-          name: "isi-volume"
-          readOnly: false
+      volumeMounts: {{ RAVENS_CRA_VOLUME_MOUNTS }}
       # web port
       ports:
         - containerPort: 8080
@@ -109,18 +99,9 @@ spec:
     # ROOK CONTAINER SPECS
     # -------------------------
     - name: rook
-      image: registry.datadrivendiscovery.org/tworavens/tworavens/rook-service:latest
+      image: {{ rook_image }}
       # same mounts as ta3-main and ta2-main
-      volumeMounts:
-        - mountPath: /shared_dir
-          name: shared-vol
-          readOnly: false
-        - mountPath: "/ravens_volume"
-          name: "ravens-volume"
-          readOnly: false
-        - mountPath: /tmp/dsbox-ta2/
-          name: "isi-volume"
-          readOnly: false
+      volumeMounts: {{ RAVENS_CRA_VOLUME_MOUNTS }}
       # web port
       ports:
         - containerPort: 8000
@@ -154,7 +135,7 @@ spec:
     # TA2 CONTAINER
     # -------------------------
     - name: ta2-main
-      image: registry.datadrivendiscovery.org/ta2/isi_ta2:python3
+      image: {{ TA2_IMAGE_NAME }}
       # environment variables passed to container
       env:
         # NIST eval id
@@ -167,13 +148,4 @@ spec:
         # gRPC port
         - containerPort: 50051
           protocol: TCP
-      volumeMounts:
-        - mountPath: /shared_dir
-          name: shared-vol
-          readOnly: false
-        - mountPath: "/ravens_volume"
-          name: "ravens-volume"
-          readOnly: false
-        - mountPath: /tmp/dsbox-ta2/
-          name: "isi-volume"
-          readOnly: false
+      volumeMounts: {{ RAVENS_CRA_VOLUME_MOUNTS }}

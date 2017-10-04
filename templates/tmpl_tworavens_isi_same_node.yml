@@ -137,7 +137,7 @@ spec:
     # TA2 CONTAINER
     # -------------------------
     - name: ta2-main
-      image: {{ isi_ta2_image }}
+      image: {{ TA2_IMAGE_NAME }}
       # environment variables passed to container
       env:
         # NIST eval id

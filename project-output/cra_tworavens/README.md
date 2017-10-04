@@ -8,7 +8,7 @@ Within the repository are the 3 components according to the TA3 Submission Guide
 
 ### Component 1: meta.json file
 
-The `meta.json` file is at the top level of this repository: [meta.json file](https://gitlab.datadrivendiscovery.org/cTA2TA3/ISI_TwoRavens/blob/master/meta.json)
+The `meta.json` file is at the top level of this repository: [meta.json file](https://gitlab.datadrivendiscovery.org/cTA2TA3/CRA_TwoRavens/blob/master/meta.json)
 
 
 ### Component 2: Docker images
@@ -17,30 +17,30 @@ The following docker images may be found in this repository:
 
 - TA3 Images
 
-  - registry.datadrivendiscovery.org/cta2ta3/isi_tworavens/tworavens/nginx:latest
-  - registry.datadrivendiscovery.org/cta2ta3/isi_tworavens/tworavens:latest
-  - registry.datadrivendiscovery.org/cta2ta3/isi_tworavens/tworavens/rook-service:latest
+  - registry.datadrivendiscovery.org/cta2ta3/cra_tworavens/tworavens/nginx:latest
+  - registry.datadrivendiscovery.org/cta2ta3/cra_tworavens/tworavens:latest
+  - registry.datadrivendiscovery.org/cta2ta3/cra_tworavens/tworavens/rook-service:latest
 
 - TA2 Image
 
-  - registry.datadrivendiscovery.org/cta2ta3/isi_tworavens/ta2/isi_ta2:latest
+  - registry.datadrivendiscovery.org/cta2ta3/cra_tworavens/eve/docker-images:latest
 
 - Pull commands
 
     ```
     # TA3 Images
     
-    docker pull registry.datadrivendiscovery.org/cta2ta3/isi_tworavens/tworavens/nginx:latest
-    docker pull registry.datadrivendiscovery.org/cta2ta3/isi_tworavens/tworavens:latest
-    docker pull registry.datadrivendiscovery.org/cta2ta3/isi_tworavens/tworavens/rook-service:latest
+    docker pull registry.datadrivendiscovery.org/cta2ta3/cra_tworavens/tworavens/nginx:latest
+    docker pull registry.datadrivendiscovery.org/cta2ta3/cra_tworavens/tworavens:latest
+    docker pull registry.datadrivendiscovery.org/cta2ta3/cra_tworavens/tworavens/rook-service:latest
 
     # TA2 Image
-    docker pull registry.datadrivendiscovery.org/cta2ta3/isi_tworavens/ta2/isi_ta2:latest
+    docker pull registry.datadrivendiscovery.org/cta2ta3/cra_tworavens/eve/docker-images:latest
     ```
 
 ### Component 3: Kubernetes config file
 
-The Kubernetes config file, [tworavens_isi_same_node.yml](https://gitlab.datadrivendiscovery.org/cTA2TA3/ISI_TwoRavens/blob/master/tworavens_isi_same_node.yml) maybe found at the top level of this repository.
+The Kubernetes config file, [tworavens_cra_same_node.yml](https://gitlab.datadrivendiscovery.org/cTA2TA3/CRA_TwoRavens/blob/master/tworavens_cra_same_node.yml) maybe found at the top level of this repository.
 
 This config file contains references to the images listed in Component 2.
 

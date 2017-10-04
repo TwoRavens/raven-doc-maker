@@ -1,6 +1,8 @@
 
-# Retag the pulled docker images for use in minikube
+# Retag the pulled docker images for use in this repo
 
 ```{% for tc in TAG_COMMANDS %}
-{{ tc }} {% endfor %}
+# tag {{ loop.index }}
+{{ tc }}
+{% endfor %}
 ```

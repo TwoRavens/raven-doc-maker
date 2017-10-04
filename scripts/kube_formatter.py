@@ -42,28 +42,30 @@ def make_template(template_dict, template_name, rendered_filename):
 
 
 if __name__ == '__main__':
-    # deploy pod.yml
-    #
-    make_template(DEPLOY_DICT,
-                  'tmpl_tworavens_isi_same_node.yml',
-                  'component-3/tworavens_isi_same_node.yml')
 
-    # minikube pod.yml
-    #
-    make_template(MINIKUBE_DICT,
-                  'tmpl_tworavens_isi_same_node.yml',
-                  'test-minikube/tworavens_isi_test_node.yml')
+    if False:
+        # deploy pod.yml
+        #
+        make_template(DEPLOY_DICT,
+                      'tmpl_tworavens_isi_same_node.yml',
+                      'component-3/tworavens_isi_same_node.yml')
 
-    # image list for component-2
-    #
-    name_info = {'TA3_IMAGE_NAMES' : TA3_IMAGE_NAMES,
-                 'TA2_IMAGE_NAME' : ISI_IMAGE_NAME}
-    make_template(name_info,
-                  'tmpl_image_list.md',
-                  'component-2/image_list.md')
+        # minikube pod.yml
+        #
+        make_template(MINIKUBE_DICT,
+                      'tmpl_tworavens_isi_same_node.yml',
+                      'test-minikube/tworavens_isi_test_node.yml')
 
-    # retag list for local testing
-    tag_info = {'TAG_COMMANDS' : TAG_COMMANDS}
-    make_template(tag_info,
-                  'tmpl_image_retag.md',
-                  'test-minikube/image_retag.md')
+        # image list for component-2
+        #
+        name_info = {'TA3_IMAGE_NAMES' : TA3_IMAGE_NAMES,
+                     'TA2_IMAGE_NAME' : ISI_IMAGE_NAME}
+        make_template(name_info,
+                      'tmpl_image_list.md',
+                      'component-2/image_list.md')
+
+        # retag list for local testing
+        tag_info = {'TAG_COMMANDS' : TAG_COMMANDS}
+        make_template(tag_info,
+                      'tmpl_image_retag.md',
+                      'test-minikube/image_retag.md')

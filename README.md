@@ -19,4 +19,23 @@ The config file, which contains references to the images, may be found in the [c
 
 The ta3_search command to load a config file may be executed against the running ta3-main container.
 
-The format for the command is
+The format for the command is:
+
+- **Docker version**
+
+In this example, the container name is `ta3-main` which is also the reference in the kubernetes configuration file:
+
+```
+docker exec -ti ta3-main /bin/bash -c 'ta3_search $CONFIG_JSON_PATH'
+```
+
+- **Kubectl version**
+
+In this example, the pod name* is `raven-pod1` and the container name is `ta3-main`.  
+(It is assumed that the pod name will change based on the eval_id.)
+
+```
+kubectl exec  -ti raven-pod1 --container ta3-main -- /bin/bash -c 'ta3_search $CONFIG_JSON_PATH'
+```
+
+Note: the '-ti' is not needed but gives better formatted output if the config has issues such as inaccessible paths.

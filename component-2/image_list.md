@@ -5,7 +5,7 @@ The images used for this test may be found at the following locations:
 ## TA3 Images
 
  - registry.datadrivendiscovery.org/tworavens/tworavens/nginx:latest
- - registry.datadrivendiscovery.org/tworavens/tworavens/tworavens:latest
+ - registry.datadrivendiscovery.org/tworavens/tworavens:latest
  - registry.datadrivendiscovery.org/tworavens/tworavens/rook-service:latest
 
 ## TA2 Image
@@ -18,7 +18,7 @@ The images used for this test may be found at the following locations:
 # TA3 Images
 
 docker pull registry.datadrivendiscovery.org/tworavens/tworavens/nginx:latest
-docker pull registry.datadrivendiscovery.org/tworavens/tworavens/tworavens:latest
+docker pull registry.datadrivendiscovery.org/tworavens/tworavens:latest
 docker pull registry.datadrivendiscovery.org/tworavens/tworavens/rook-service:latest
 
 # TA2 Image

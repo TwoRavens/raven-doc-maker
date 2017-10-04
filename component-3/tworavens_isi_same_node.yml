@@ -55,7 +55,7 @@ spec:
     # TA3 Main - TwoRavens
     # -------------------------
     - name: ta3-main
-      image: registry.datadrivendiscovery.org/tworavens/tworavens/tworavens:latest
+      image: registry.datadrivendiscovery.org/tworavens/tworavens:latest
       # current tworavens has a mount at /ravens_volume
       volumeMounts: 
         - mountPath: /shared_dir

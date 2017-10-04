@@ -36,7 +36,8 @@ spec:
     - name: "isi-volume"
       emptyDir: {}
     - name: "ravens-volume"
-      emptyDir: {}
+      hostPath:
+        path: "/Users/ramanprasad/Documents/github-rp/TwoRavens/ravens_volume"
   containers:
     # -------------------------
     # TA3 - Ravens nginx - reverse proxy for ta3-main

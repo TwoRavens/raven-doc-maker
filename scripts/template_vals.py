@@ -14,6 +14,7 @@ CRA_TA2_IMAGE_KEY = 'cra_ta2_image'
 DEPLOY_DICT = {RAVENS_NGINX_IMAGE_KEY : '%s/tworavens/nginx:latest' % TWORAVENS_REGISTRY,
                TWORAVENS_IMAGE_KEY : '%s/tworavens:latest' % TWORAVENS_REGISTRY,
                ROOK_IMAGE_KEY : '%s/tworavens/rook-service:latest' % TWORAVENS_REGISTRY,
+               'IS_DEPLOY' : True,
                # leave in for NIST
                'CONFIG_JSON_PATH' : '{{ CONFIG_JSON_PATH }}',
                'eval_id' : '{{ eval_id }}',

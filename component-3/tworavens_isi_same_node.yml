@@ -57,7 +57,7 @@ spec:
     - name: ta3-main
       image: registry.datadrivendiscovery.org/tworavens/tworavens:latest
       # current tworavens has a mount at /ravens_volume
-      volumeMounts: 
+      volumeMounts:
         - mountPath: /shared_dir
           name: shared-vol
           readOnly: false
@@ -111,7 +111,7 @@ spec:
     - name: rook
       image: registry.datadrivendiscovery.org/tworavens/tworavens/rook-service:latest
       # same mounts as ta3-main and ta2-main
-      volumeMounts: 
+      volumeMounts:
         - mountPath: /shared_dir
           name: shared-vol
           readOnly: false
@@ -167,7 +167,7 @@ spec:
         # gRPC port
         - containerPort: 50051
           protocol: TCP
-      volumeMounts: 
+      volumeMounts:
         - mountPath: /shared_dir
           name: shared-vol
           readOnly: false

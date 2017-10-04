@@ -4,15 +4,16 @@ Within the repository are the 3 components according to the TA3 Submission Guide
 
 ### Submission Component 1: meta.json file
 
-The meta.json file may be found in the [component-1 directory](https://gitlab.datadrivendiscovery.org/tworavens/ISI-TwoRavens/blob/master/component-1/meta.json)
+The **component-1 directory** of this repository contains the [meta.json file](https://gitlab.datadrivendiscovery.org/tworavens/ISI-TwoRavens/blob/master/component-1/meta.json)
 
 ### Submission Component 2: Docker images
 
-The Docker images are listed in the [component-2 directory](https://gitlab.datadrivendiscovery.org/tworavens/ISI-TwoRavens/blob/master/component-2/docker_images.md)
+The **component-2 directory** contains a [list of docker images](https://gitlab.datadrivendiscovery.org/tworavens/ISI-TwoRavens/blob/master/component-2/docker_images.md) as well as their pull commands.
 
 ### Submission Component 3: Kubernetes config file
 
-The config file, which contains references to the images, may be found in the [component-3 directory](https://gitlab.datadrivendiscovery.org/tworavens/ISI-TwoRavens/blob/master/component-3/tworavens_isi_same_node.yml)
+The **component-3 directory** contains the [Kubernetes config file](https://gitlab.datadrivendiscovery.org/tworavens/ISI-TwoRavens/blob/master/component-3/tworavens_isi_same_node.yml).
+This config file contains references to the images listed in Component 2.
 
 
 ### Note on the ta3_search command

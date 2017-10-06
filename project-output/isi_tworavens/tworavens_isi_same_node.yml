@@ -26,12 +26,13 @@ metadata:
   labels:
     evalId: {{ eval_id }}
     main: "yes"
+    ta3-main: "yes"
+    ta2-main: "yes"
 spec:
   restartPolicy: Never
   volumes:
-    # TA3 specification volume mount for both containers
-    - name: shared-vol
-      emptyDir: {}
+    # TA3 specification 'shared-vol' volume mount
+    # (this is now added by the NIST script)
     # Additional Volumes mounted for ISI/TwoRavens sharing
     - name: "isi-volume"
       emptyDir: {}
@@ -77,9 +78,6 @@ spec:
         # NIST eval id
         - name: EVAL_ID
           value: {{ eval_id }}
-        # NIST config path
-        - name: CONFIG_JSON_PATH
-          value: "{{ CONFIG_JSON_PATH }}"
         # Turn off test mode
         - name: TA2_STATIC_TEST_MODE
           value: "False"
@@ -160,9 +158,6 @@ spec:
         # NIST eval id
         - name: EVAL_ID
           value: {{ eval_id }}
-        # NIST config path
-        - name: CONFIG_JSON_PATH
-          value: "{{ CONFIG_JSON_PATH }}"
       ports:
         # gRPC port
         - containerPort: 50051

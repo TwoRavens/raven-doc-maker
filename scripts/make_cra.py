@@ -1,8 +1,12 @@
 from kube_formatter import make_template, BASE_DIR
 from template_vals import *
-from os.path import abspath, dirname, isfile, join
+from os.path import abspath, dirname, isdir, isfile, join
+import os
 
 PROJECT_DIR = join(BASE_DIR, 'project-output', 'cra_tworavens')
+PROJECT_DEV_NOTE_DIR = join(PROJECT_DIR, 'dev_notes')
+if not isdir(PROJECT_DEV_NOTE_DIR):
+    os.makedirs(PROJECT_DEV_NOTE_DIR)
 
 def make_cra_project():
 
@@ -31,11 +35,11 @@ def make_cra_project():
 
     make_template(tag_info,
                   'tmpl_image_retag2.md',
-                  join(PROJECT_DIR, 'dev_notes/image_retag.md'))
+                  join(PROJECT_DEV_NOTE_DIR, 'image_retag.md'))
 
     make_template(tag_info,
                   'tmpl_docker_tag_push.py',
-                  join(PROJECT_DIR, 'dev_notes/docker_tag_push.py'))
+                  join(PROJECT_DEV_NOTE_DIR, 'docker_tag_push.py'))
 
 
 if __name__ == '__main__':

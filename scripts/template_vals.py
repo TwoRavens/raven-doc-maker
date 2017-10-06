@@ -31,7 +31,7 @@ DEPLOY_DICT = {RAVENS_NGINX_IMAGE_KEY : '%s/tworavens/nginx:latest' % TWORAVENS_
 
 ISI_DEPLOY_DICT = {\
         'title' : 'TwoRavens and ISI',
-        'description' : 'This repository contains the TA3 submission for TwoRavens and ISI.', 
+        'description' : 'This repository contains the TA3 submission for TwoRavens and ISI.',
         RAVENS_NGINX_IMAGE_KEY : '%s/tworavens/nginx:latest' % ISI_REGISTRY,
         TWORAVENS_IMAGE_KEY : '%s/tworavens:latest' % ISI_REGISTRY,
         ROOK_IMAGE_KEY : '%s/tworavens/rook-service:latest' % ISI_REGISTRY,
